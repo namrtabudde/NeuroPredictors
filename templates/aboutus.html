@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #d8d8d8;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #7731f1;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;  /* All links start with white color */
+            font-weight: bold;
+        }
+
+        .nav-links a.active {
+            color: #fafafa;
+            text-decoration: underline;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-container img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: fadeInZoom 2s ease-in-out;
+            transition: transform 0.3s ease;
+        }
+
+        @keyframes fadeInZoom {
+            0% {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .image-container img:hover {
+            transform: scale(1.1);
+        }
+
+        .about-us {
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            color: #333;
+        }
+
+        .about-us h2 {
+            margin-bottom: 10px;
+            color: #ff4f4f;
+        }
+
+        .about-us p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .about-us h3 {
+            margin-top: 15px;
+            color: #444;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nav-links li {
+                margin: 10px 0;
+            }
+
+            .content {
+                grid-template-columns: 1fr;
+            }
+
+            .image-container img {
+                max-width: 300px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-links li {
+                margin-left: 10px;
+            }
+
+            .image-container img {
+                max-width: 250px;
+            }
+
+            .about-us {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>NeuroPredictors</h3>
+        <ul class="nav-links">
+            <li><a href="/" class="active">Home</a></li> 
+            <li><a href="/aboutus">About</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/reviews">Reviews</a></li>
+            
+        </ul>
+    </div>
+
+    <div class="content">
+        <div class="image-container">
+            <img src="static/images/dd.jpeg" alt="Doctor Image">
+        </div>
+        <div class="about-us">
+            <h2>About Us</h2>
+            <h3>We Care About Your Brain</h3>
+            <p>Welcome to NeuroDetect, where innovation meets brain health. Our mission is to make early detection and management of brain diseases accessible to everyone. We are not here to replace human expertise, but to offer a valuable tool to support brain health professionals in their practice.</p>
+
+            <h3>Our Vision:</h3>
+            <p>At NeuroDetect, we dream of a world where preventable brain disorders are a thing of the past. Using the power of AI and data science, we aim to alleviate the burden faced by millions worldwide. NeuroDetect is more than just technology—it's a movement where every brain matters, and no one is left behind.</p>
+
+            <h3>Our Mission:</h3>
+            <p>Our mission is simple: to revolutionize brain health diagnostics through cutting-edge technology. We aim to bridge the gap between limited access to expert care and the increasing demand for it. At NeuroDetect, we are committed to providing the best brain care solutions, regardless of location, ensuring everyone has access to excellent brain health support.</p>
+
+            <h3>Our Commitment to Excellence:</h3>
+            <p>Excellence is not just a goal at NeuroDetect—it's our guiding principle. By combining our deep understanding of neurology with the latest advancements in technology, we strive for accuracy, scalability, and accessibility. We are committed to shaping the future of brain health diagnostics for a better world.</p>
+        </div>
+    </div>
+</body>
+</html>

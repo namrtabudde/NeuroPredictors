@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews - NeuroPredictors</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #7731f1;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        header nav ul li a.active {
+            text-decoration: underline;
+        }
+
+        #reviews {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #9e55f0;
+            margin-bottom: 40px;
+        }
+
+        .reviews-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .review-box {
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 20px;
+            width: 30%;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: relative;
+            text-align: center;
+        }
+
+        .review-box h3 {
+            color: #c493dd;
+            margin-bottom: 15px;
+        }
+
+        .review-box p {
+            margin-bottom: 20px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 10px;
+        }
+
+        footer {
+            background-color: #7731f1;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* Media Queries for responsiveness */
+        @media (max-width: 1024px) {
+            .review-box {
+                width: 45%; /* Adjust the width for tablet screens */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .reviews-container {
+                display: block;
+                padding: 0 10px;
+            }
+            
+            .review-box {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+
+            header nav ul {
+                text-align: center;
+            }
+
+            .review-box {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>NeuroPredictors</h1>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li> 
+                <li><a href="/aboutus" class="active">About</a></li>
+                <li><a href="/services" class="active">Services</a></li>
+                <li><a href="/reviews" class="active">Reviews</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <section id="reviews">
+        <h2>User's Reviews</h2>
+        <div class="reviews-container">
+            <div class="review-box">
+                <img src="static/images/users1.jpg" alt="Dipali " class="avatar">
+                <h3>Dipali Jhadhav</h3>
+                <p>NeuroPredictors has been a game-changer for me. With its fast and accurate diagnosis, I feel more confident in managing my brain. Highly recommended!</p>
+            </div>
+            <div class="review-box">
+                <img src="static/images/users2.jpeg"  class="avatar">
+                <h3>Akanksha </h3>
+                <p>I'm truly impressed by the instant results provided by NeuroPredictors. It's convenient, reliable, and has become an essential tool in my brain health routine.</p>
+            </div>
+            <div class="review-box">
+                <img src="static/images/users3.jpeg" alt="MAYUR" class="avatar">
+                <h3>Mayur Budde</h3>
+                <p>As a healthcare professional, I highly value the expert consultation offered by NeuroPredictors. It's a valuable resource for both patients and practitioners alike.</p>
+            </div>
+            <div class="review-box">
+                <img src="static/images/users2.jpeg" alt="Pranita" class="avatar">
+                <h3>Pranita Gaware</h3>
+                <p>NeuroPredictors accuracy in early detection is unmatched. I recommend this tool to anyone concerned about brain health.</p>
+            </div>
+            <div class="review-box">
+                <img src="static/images/users1.jpg" alt="" class="avatar">
+                <h3>Snehal Patil</h3>
+                <p>Being able to consult an expert 24/7 through NeuroPredictors has made managing my brain easier. The platform is user-friendly and provides peace of mind.</p>
+            </div>
+            <div class="review-box">
+                <img src="static/images/users1.jpg" alt="" class="avatar">
+                <h3>Aditi </h3>
+                <p> They give instant result of brain tumors,Dementia ,Schizophrenia like Disease.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 NeuroPredictors. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // You can add any interactive behavior here later
+    </script>
+</body>
+</html>

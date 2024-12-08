@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - NeuroPredictors</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f8;
+        }
+
+        header {
+            background-color: #7731f1;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #7731f1;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .services-container {
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 columns per row */
+            gap: 20px;
+        }
+
+        .service-box {
+            background-color: #ffffff;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Align content to center */
+        }
+
+        .service-box img {
+            width: 100%;
+            height: 200px; /* Adjust height based on your needs */
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .service-box h3 {
+            margin-bottom: 10px;
+        }
+
+        .service-box p {
+            margin-bottom: 10px;
+        }
+
+        .hidden-info {
+            display: none;
+            padding: 10px;
+            background-color: #f0f0f0;
+            margin-top: 10px;
+            border-left: 5px solid #c2a3f9;
+        }
+
+        footer {
+            background-color: #7731f1;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        button {
+            background-color: #a49df1;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #8ea0e8;
+        }
+
+        /* Responsive styling */
+        @media (max-width: 1024px) {
+            .services-container {
+                grid-template-columns: repeat(2, 1fr); /* 2 columns for tablet-sized screens */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .services-container {
+                grid-template-columns: 1fr; /* Single column for mobile-sized screens */
+            }
+
+            nav ul {
+                flex-direction: column; /* Stack the navigation links vertically */
+            }
+
+            nav ul li {
+                margin: 10px 0; /* Add margin between vertical links */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>NeuroPredictors</h1>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li> 
+                <li><a href="/aboutus" class="active">About</a></li>
+                <li><a href="/services" class="active">Services</a></li>
+                <li><a href="/reviews" class="active">Reviews</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="services-container">
+            <!-- Service 1 -->
+            <div class="service-box">
+                <img src="static/images/first.jpeg" alt="MRI Scan"> <!-- Add your image here -->
+                <h3>MRI Scan Review and Prediction</h3>
+                <p>We review MRI scans and help identify potential issues in brain health, including dementia, schizophrenia, and brain tumors.</p>
+                <button onclick="toggleInfo('scan-info')">Learn More</button>
+                <div id="scan-info" class="hidden-info">
+                    <p>Our specialists analyze MRI scans to detect neurological conditions such as dementia, schizophrenia, and brain tumors. This early detection allows for timely intervention and treatment options.</p>
+                </div>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="service-box">
+                <img src="static/images/second1.jpeg" alt="Consultation"> <!-- Add your image here -->
+                <h3>24/7 Consultation</h3>
+                <p>Get round-the-clock access to medical professionals to discuss your results and get expert opinions on brain-related health conditions.</p>
+                <button onclick="toggleInfo('consultation-info')">Learn More</button>
+                <div id="consultation-info" class="hidden-info">
+                    <p>Our consultation services are available 24/7, providing immediate access to specialists who can offer guidance on diagnosing and managing brain diseases like dementia and brain tumors based on your MRI results.</p>
+                </div>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="service-box">
+                <img src="static/images/3th.jpeg" alt="Instant Reports"> <!-- Add your image here -->
+                <h3>Instant Reports</h3>
+                <p>Receive timely, detailed reports to address potential brain health issues such as tumors, dementia, or schizophrenia as early as possible.</p>
+                <button onclick="toggleInfo('instant-reports-info')">Learn More</button>
+                <div id="instant-reports-info" class="hidden-info">
+                    <p>We provide detailed reports based on MRI analysis, offering insights into conditions like brain tumors and other neurological disorders. You can take quick, informed actions with our expert recommendations.</p>
+                </div>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="service-box">
+                <img src="static/images/t4th.jpeg" alt="Disease Prediction"> <!-- Add your image here -->
+                <h3>Disease Prediction for Dementia and Schizophrenia</h3>
+                <p>Advanced prediction models to help identify early signs of dementia, schizophrenia, and brain tumors using MRI scans.</p>
+                <button onclick="toggleInfo('disease-prediction-info')">Learn More</button>
+                <div id="disease-prediction-info" class="hidden-info">
+                    <p>We use machine learning algorithms to predict conditions like dementia and schizophrenia by analyzing MRI data. These predictions provide early warning and treatment options for patients.</p>
+                </div>
+            </div>
+
+            <!-- Service 5 -->
+            <div class="service-box">
+                <img src="static/images/5.jpeg" alt="Telehealth Services"> <!-- Add your image here -->
+                <h3>Telehealth Services</h3>
+                <p>Access our medical services remotely, with virtual consultations, diagnosis, and MRI scan analysis.</p>
+                <button onclick="toggleInfo('telehealth-info')">Learn More</button>
+                <div id="telehealth-info" class="hidden-info">
+                    <p>Our telehealth services allow you to consult with specialists from the comfort of your home. We provide virtual MRI reviews, diagnosis, and treatment recommendations.</p>
+                </div>
+            </div>
+
+            <!-- Service 6 -->
+            <div class="service-box">
+                <img src="static/images/6th.jpeg" alt="Follow-Up Health Monitoring"> <!-- Add your image here -->
+                <h3>Follow-Up Health Monitoring</h3>
+                <p>We offer continuous health monitoring after diagnosis, helping patients stay on track with their treatment plans.</p>
+                <button onclick="toggleInfo('followup-info')">Learn More</button>
+                <div id="followup-info" class="hidden-info">
+                    <p>Our follow-up health monitoring services track your progress after the initial diagnosis, ensuring you receive ongoing care and that your treatment is effective.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 NeuroPredictors. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function toggleInfo(infoId) {
+            const infoElement = document.getElementById(infoId);
+            if (infoElement.style.display === "block") {
+                infoElement.style.display = "none";
+            } else {
+                infoElement.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
